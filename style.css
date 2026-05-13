@@ -1,0 +1,175 @@
+/* style.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #0d0d2b, #1a1a40);
+    --primary: hsl(210, 80%, 55%);
+    --accent: hsl(45, 90%, 60%);
+    --text-light: #f0f0f0;
+    --text-dark: #222;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--glass-bg);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+}
+
+.hero {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero img {
+    width: 250px;
+    max-width: 90vw;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary), 0 0 40px var(--accent);
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+}
+
+.hero img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 0 30px var(--primary), 0 0 60px var(--accent);
+}
+
+.fact-box {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(6px);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    max-width: 80%;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem 0;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    text-align: left;
+}
+
+section h2 {
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+    font-size: 1.8rem;
+}
+
+.bossfight .problem {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-left: 4px solid var(--primary);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius);
+}
+
+.show-answer {
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    margin-top: 0.5rem;
+}
+
+.show-answer:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.answer {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Floating text for mango info */
+.floating {
+    position: fixed;
+    top: 30%;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.floating.left {
+    left: -2rem;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+}
+
+.floating.right {
+    right: -2rem;
+    transform: rotate(90deg);
+    transform-origin: right top;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.fact-box {
+    font-size: 1rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+}
+}
